@@ -20,11 +20,11 @@ for(let i=0; i<mails.length; i++){
     //per rompere il ciclo e non fare ripettere la stessa frase troppe volte
     mails.length = 0;
 
- } else if(index =-1 ){
+ } else{
     result.innerHTML="non puoi accedere"
     console.log(" non puoi accedere") 
     //per rompere il ciclo e non fare ripettere la stessa frase troppe volte 
     mails.length = 0;
- }  
+ } 
  
 }
