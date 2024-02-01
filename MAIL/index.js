@@ -5,27 +5,32 @@ controlla che sia nella lista di chi può accedere (qui quindi dovremmo creare d
 stampa un messaggio appropriato sull’esito del controllo.
 */
 
-let userMail = "omam@alam.com"
+let userMail = document.querySelector("#myMail")
 let mails = ["omam@alan.com","marco@mengoni.com","nloga@andy.com","violani@pietro.com","spanu@gabriel.com"]
-
-
+let button = document.querySelector("#btn")
 const result = document.querySelector("#output")
  
-
-for(let i=0; i<mails.length; i++){
-     
- if(userMail === mails[i] ){
-    result.innerHTML="puoi accedere"
-    console.log("puoi accedere") 
-    //per uscire al ciclo
-    mails.length=0;
+button.addEventListener("click", 
+function(){
     
- } else{
-    result.innerHTML="non puoi accedere"
-    console.log(" non puoi accedere") 
-    //per uscire al ciclo
-    mails.length=0;
- } 
 
- 
+    for(let i=0; i<mails.length; i++){
+     
+     if(userMail.value === mails[i] ){
+           result.innerHTML=" puoi accedere"
+           //per uscire al ciclo
+            mails.length=0;
+           
+        } else /*if(userMail != mails[i])*/{
+           result.innerHTML=" non puoi accedere"
+        } 
+       
+        
+       }
+
+
 }
+
+)
+
+
